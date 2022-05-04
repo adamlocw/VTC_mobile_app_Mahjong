@@ -9,7 +9,7 @@ import UIKit
 
 import MapKit
 
-
+//Open the Map View in application
 class MapViewController: UIViewController,MKMapViewDelegate {
 
     var locationManager = CLLocationManager()
@@ -20,7 +20,7 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      //  mapSetting()
+      //Setup the map location
         let coordinate =    CLLocationCoordinate2D.init(latitude: Double(shopModel["lat"]!)! , longitude: Double(shopModel["lon"]!)!)
         
         self.mapView.setRegion(MKCoordinateRegion.init(center: coordinate, span: MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
