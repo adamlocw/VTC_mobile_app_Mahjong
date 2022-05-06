@@ -34,7 +34,7 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         loadData()
     }
     
-    //Getting the detailed order list from MongoDB with data API service.
+    //Getting the detailed order list from MongoDB with Data API service.
     func loadData(){
         
         HubView.shared.show(self.view)

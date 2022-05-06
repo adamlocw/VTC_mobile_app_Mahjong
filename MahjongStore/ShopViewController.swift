@@ -32,7 +32,7 @@ class ShopViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
-    //Getting the shop address list and details from MongoDB with data API service.
+    //Getting the shop address list and details from MongoDB with Data API service.
     func loadData(){
         
         HubView.shared.show(self.view)
