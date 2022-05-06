@@ -9,6 +9,7 @@ import UIKit
 
 class NetworkTool: NSObject {
 
+  //Using post method to get the information from MongoDB with Data API service.
   class  func post(parm:Any,url:String,finish:@escaping (_ succeed:Bool,_ result:Any)->Void) {
         
         let session = URLSession(configuration: .default)
@@ -43,12 +44,12 @@ class NetworkTool: NSObject {
         task.resume()
     }
     
+    // Using post method to send the order items confirmation email via SendGrid Web API service.
     class  func postEmail(parm:Any,url:String,finish:@escaping (_ succeed:Bool,_ result:Any)->Void) {
           
           let session = URLSession(configuration: .default)
           //URL
           var request = URLRequest(url: URL(string: url)!)
-        //SPaSXxXwS-e2CV4fAgckBQ
           request.setValue("Bearer sendgrid-send-email-api-key", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
           request.httpMethod = "POST"
