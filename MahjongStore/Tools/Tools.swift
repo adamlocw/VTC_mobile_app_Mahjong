@@ -7,7 +7,7 @@
 
 import UIKit
 
-//Tools (web loading of images and automatic height calculation based on the given width)
+//Tools (web loading of images and automatic height calculation based on the given width).
 func getTextHeight(_ text:String, font:UIFont, width:CGFloat)->CGFloat{
     var textSize:CGSize!
     if CGSize(width: width, height: CGFloat(MAXFLOAT)).equalTo(CGSize.zero) {

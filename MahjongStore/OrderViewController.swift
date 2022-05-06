@@ -10,6 +10,7 @@ import Foundation
 import MessageUI
 import LocalAuthentication
 
+// The second page of order items.
 class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,MFMailComposeViewControllerDelegate {
     
     var datasource = [[String:String]]()
@@ -33,6 +34,7 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         loadData()
     }
     
+    //Getting the detailed order list from MongoDB with data API service.
     func loadData(){
         
         HubView.shared.show(self.view)
@@ -57,7 +59,7 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         }
     }
     
-    // MARK: tableView delegate
+    //Create the table view and cell for the order list items.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderListTableViewCell", for: indexPath) as! OrderListTableViewCell
@@ -81,6 +83,7 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return datasource.count
     }
     
+    //Button for order items confirmation and send the confirmation email to shop, need Face ID before send the order confirmation email.
     @IBAction func confirmButtonClick(_ sender: Any) {
         
         var totalNumber:Int = 0

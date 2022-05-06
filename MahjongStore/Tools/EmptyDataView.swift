@@ -7,7 +7,7 @@
 
 import UIKit
 
-//If data load failed, application will show this page to click to reload data
+//If data load failed, application will show this page to click to reload data.
 class EmptyDataView: UIView {
 
     var loadAgainButtonReturn: ((() -> Void)?)

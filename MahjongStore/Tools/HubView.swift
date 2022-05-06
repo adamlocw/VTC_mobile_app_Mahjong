@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-//Prompt boxes and network latency waiting
+//Prompt boxes and network latency waiting.
  final class HubView: NSObject {
     static let shared = HubView()
     private override init() {}

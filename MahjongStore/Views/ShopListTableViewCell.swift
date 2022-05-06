@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-//The class for the custom tableViewCell on the page of shop address list
+//The class for the custom tableViewCell on the page of shop address list.
 class ShopListTableViewCell: UITableViewCell,MKMapViewDelegate{
 
     @IBOutlet weak var shopImg: UIImageView!
@@ -37,7 +37,7 @@ class ShopListTableViewCell: UITableViewCell,MKMapViewDelegate{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization code.
     }
     //add Annotation
     func addAnnotation(coordinate:CLLocationCoordinate2D,title:String,subtitle:String){
@@ -50,7 +50,7 @@ class ShopListTableViewCell: UITableViewCell,MKMapViewDelegate{
         shopMap.addAnnotation(annotattion)
         
     }
-    // MARK:  mapViewDelegete
+    //Setup the map view. 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "an")
@@ -70,7 +70,7 @@ class ShopListTableViewCell: UITableViewCell,MKMapViewDelegate{
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        // Configure the view for the selected state.
     }
 
 }

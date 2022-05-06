@@ -7,7 +7,7 @@
 
 import UIKit
 
-//The class for the custom tableViewCell on the page of order list
+//The class for the custom tableViewCell on the page of order list.
 class OrderListTableViewCell: UITableViewCell {
 
     var productNum:Int = 0
@@ -31,13 +31,13 @@ class OrderListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization code.
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        // Configure the view for the selected state.
     }
     @IBAction func changeNumberClick(_ sender: UIButton) {
             if sender.isEqual(self.addButton){

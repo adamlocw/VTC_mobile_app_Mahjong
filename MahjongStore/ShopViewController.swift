@@ -2,12 +2,13 @@
 //  ShopViewController.swift
 //  MahjongStore
 //
-//  Created by Adam LO on 2022/4/23.
+//  Created by Adam LO on 2022/5/4.
 //
 
 import UIKit
 import CoreLocation
 
+//The first page of address list for Mahjong Shops.
 class ShopViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     var datasource = [[String:String]]()
@@ -31,7 +32,7 @@ class ShopViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
-    // MARK: loadData
+    //Getting the shop address list and details from MongoDB with data API service.
     func loadData(){
         
         HubView.shared.show(self.view)
@@ -58,7 +59,7 @@ class ShopViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-    // MARK: tableView delegate
+    //Create the table view and cell for the list of shop address.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShopListTableViewCell", for: indexPath) as! ShopListTableViewCell
@@ -71,6 +72,7 @@ class ShopViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
+   //Button to open map in app to show the map for the shop.
    @objc func openMap(button:UIButton){
        
        let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
