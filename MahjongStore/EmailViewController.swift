@@ -54,7 +54,7 @@ class EmailViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
-    //Confirm and send the order email to shop. 
+    //Confirm and send the order email to shop.
     @IBAction func sendButtonClick(_ sender: Any) {
 
       
