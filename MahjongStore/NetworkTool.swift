@@ -15,7 +15,7 @@ class NetworkTool: NSObject {
         let session = URLSession(configuration: .default)
         //URL
         var request = URLRequest(url: URL(string: url)!)
-        request.setValue("mongodb-data-api-key", forHTTPHeaderField: "api-key")
+        request.setValue("mongodb-api-key", forHTTPHeaderField: "api-key")
         request.httpMethod = "POST"
       request.timeoutInterval = 20
       request.httpBody = try! JSONSerialization.data(withJSONObject: parm, options: .prettyPrinted)
